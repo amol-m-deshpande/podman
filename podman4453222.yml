@@ -13,3 +13,7 @@ spec:
     args:
       - sleep
       - "infinity"
+    securityContext:
+      runAsUser: 1724
+      windowsOptions:
+        runAsUserName: "root"
