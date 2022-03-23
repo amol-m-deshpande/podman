@@ -8,7 +8,7 @@ spec:
      image: quay.io/podman/stable
      args:
        - sleep
-       - "1724"
+       - "infinity"
      volumeMounts:
          - mountPath: /var/run/podman
            name: podman-sock
