@@ -5,6 +5,8 @@ metadata:
 spec:
   securityContext:
     runAsUser: 1724
+    windowsOptions:
+      runAsUserName: "root"
   containers:
   - name: priv
     image: quay.io/podman/stable
