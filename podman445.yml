@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podman
+spec:
+  securityContext:
+    runAsUser: 1724
+    runAsGroup: 1724
+    fsGroup: 1724
+  containers:
+  - name: priv
+    image: quay.io/podman/stable
+    args:
+      - sleep
+      - "infinity"
