@@ -1,1 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: podman
+spec:
+  containers:
+    - name: container
+      image: amoldeshpande/podman:latest
+      args:
+        - sleep
+        - "infinity"
+      securityContext:
+        capabilities:
+        add: ["SYS_ADMIN", "mknod"]   
+        seccompProfile:
+          type: Unconfined
+        seLinuxOptions:
+          label: disable
+      volumeMounts:
+        - mountPath: /dev/fuse
+          name: fuse
 
+      
+
+      
