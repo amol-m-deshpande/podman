@@ -5,8 +5,6 @@ metadata:
 spec:
   securityContext:
     runAsUser: 1724
-    runAsGroup: root
-    fsGroup: root
   containers:
   - name: priv
     image: quay.io/podman/stable
